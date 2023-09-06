@@ -15,7 +15,7 @@
   [b]CSRF_TRUSTED_ORIGINS[/b] : Domains to trust if bragibooks is hosted behind a reverse proxy. [br]</Description>
   <Project>https://github.com/djdembeck/bragibooks</Project>
   <Overview>An audiobook library cleanup and management app, written as a frontend for web use of m4b-merge.</Overview>
-  <Registry>https://hub.docker.com/r/linuxserver/sonarr/</Registry>
+  <Registry>https://github.com/djdembeck/bragibooks/pkgs/container/bragibooks</Registry>
   <Repository>ghcr.io/djdembeck/bragibooks:main</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
