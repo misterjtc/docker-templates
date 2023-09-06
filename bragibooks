@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/sonarr.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Downloaders: MediaApp:Books</Category>
+  <Date>2023-09-05</Date>
+  <Name>bragibooks</Name>
+  <Support></Support>
+  <Description>An audiobook library cleanup & management app, written as a frontend for web use of m4b-merge.;
+  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
+  [b]/config[/b] : Storing all bragibooks config files [br]&amp;#13;&#13;
+  [b]/input[/b] : Point to your freshly downloaded audiobooks that require tagging[br]&amp;#13;&#13;
+  [b]/output[/b] : Point to where you want to place your audiobooks that are ready for primetime[br]
+  [b]8000[/b] : The web-interface. [br]</Description>
+  <Project>https://github.com/djdembeck/bragibooks</Project>
+  <Overview>An audiobook library cleanup & management app, written as a frontend for web use of m4b-merge.</Overview>
+  <Registry>https://hub.docker.com/r/linuxserver/sonarr/</Registry>
+  <Repository>ghcr.io/djdembeck/bragibooks:main</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/input</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon>https://github.com/djdembeck/bragibooks/raw/assets/logos/logo.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
