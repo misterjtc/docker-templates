@@ -11,7 +11,8 @@
   [b]/config[/b] : Storing all bragibooks config files [br]&amp;#13;&#13;
   [b]/input[/b] : Point to your freshly downloaded audiobooks that require tagging[br]&amp;#13;&#13;
   [b]/output[/b] : Point to where you want to place your audiobooks that are ready for primetime[br]
-  [b]8000[/b] : The web-interface. [br]</Description>
+  [b]8000[/b] : The web-interface. [br]
+  [b]CSRF_TRUSTED_ORIGINS[/b] : Domains to trust if bragibooks is hosted behind a reverse proxy. [br]</Description>
   <Project>https://github.com/djdembeck/bragibooks</Project>
   <Overview>An audiobook library cleanup and management app, written as a frontend for web use of m4b-merge.</Overview>
   <Registry>https://hub.docker.com/r/linuxserver/sonarr/</Registry>
@@ -26,6 +27,10 @@
     <Variable>
       <Name>PGID</Name>
       <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>CSRF_TRUSTED_ORIGINS</Name>
+      <Value></Value>
     </Variable>
   </Environment>
   <Networking>
