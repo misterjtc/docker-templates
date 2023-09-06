@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/sonarr.xml</TemplateURL>
+  <TemplateURL>https://github.com/misterjtc/docker-templates/bragibooks.xml</TemplateURL>
   <Beta>True</Beta>
-  <Category>Downloaders: MediaApp:Books</Category>
+  <Category>Tools</Category>
   <Date>2023-09-05</Date>
   <Name>bragibooks</Name>
-  <Support></Support>
+  <Support>https://github.com/misterjtc/docker-templates/issues</Support>
   <Description>An audiobook library cleanup & management app, written as a frontend for web use of m4b-merge.;
   [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
   [b]/config[/b] : Storing all bragibooks config files [br]&amp;#13;&#13;
