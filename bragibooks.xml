@@ -6,14 +6,14 @@
   <Date>2023-09-05</Date>
   <Name>bragibooks</Name>
   <Support>https://github.com/misterjtc/docker-templates/issues</Support>
-  <Description>An audiobook library cleanup & management app, written as a frontend for web use of m4b-merge.;
+  <Description>An audiobook library cleanup and management app, written as a frontend for web use of m4b-merge.;
   [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
   [b]/config[/b] : Storing all bragibooks config files [br]&amp;#13;&#13;
   [b]/input[/b] : Point to your freshly downloaded audiobooks that require tagging[br]&amp;#13;&#13;
   [b]/output[/b] : Point to where you want to place your audiobooks that are ready for primetime[br]
   [b]8000[/b] : The web-interface. [br]</Description>
   <Project>https://github.com/djdembeck/bragibooks</Project>
-  <Overview>An audiobook library cleanup & management app, written as a frontend for web use of m4b-merge.</Overview>
+  <Overview>An audiobook library cleanup and management app, written as a frontend for web use of m4b-merge.</Overview>
   <Registry>https://hub.docker.com/r/linuxserver/sonarr/</Registry>
   <Repository>ghcr.io/djdembeck/bragibooks:main</Repository>
   <BindTime>true</BindTime>
