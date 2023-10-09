@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>ddclient</Name>
-  <Repository>linuxserver/ddclient</Repository>
-  <Registry>https://hub.docker.com/r/linuxserver/ddclient</Registry>
+  <Name>jellyplex-watch</Name>
+  <Repository>/luigi311/JellyPlex-Watched</Repository>
+  <Registry>https://hub.docker.com/r/luigi311/jellyplex-watched</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/80731-support-linuxserverio-ddclient/</Support>
-  <Project>https://github.com/ddclient/ddclient</Project>
-  <Overview>Ddclient is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Service Provider. It was originally written by Paul Burry and is now mostly by wimpunk. It has the capability to update more than just dyndns and it can fetch your WAN-ipaddress in a few different ways.</Overview>
+  <Support>https://github.com/misterjtc/docker-templates/issues</Support>
+  <Project>https://github.com/luigi311/JellyPlex-Watched.git</Project>
+  <Overview>Sync watched between jellyfin and plex locally</Overview>
   <Category>Network:DNS Status:Stable</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/ddclient.xml</TemplateURL>
@@ -19,7 +19,7 @@
   <CPUset/>
   <DonateText>Donate</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
-  <Description>Ddclient is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Service Provider. It was originally written by Paul Burry and is now mostly by wimpunk. It has the capability to update more than just dyndns and it can fetch your WAN-ipaddress in a few different ways.</Description>
+  <Description>Keep in sync all your users watched history between jellyfin and plex servers locally. This uses file names and provider ids to find the correct episode/movie between the two. This is not perfect but it works for most cases. You can use this for as many servers as you want by entering multiple options in the .env plex/jellyfin section separated by commas.
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
