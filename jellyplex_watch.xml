@@ -10,15 +10,13 @@
   <Support>https://github.com/misterjtc/docker-templates/issues</Support>
   <Project>https://github.com/luigi311/JellyPlex-Watched.git</Project>
   <Overview>Sync watched between jellyfin and plex locally</Overview>
-  <Category>Network:DNS Status:Stable</Category>
+  <Category>Tools</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/ddclient.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ddclient-logo.png</Icon>
+  <Icon></Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DonateText>Donate</DonateText>
-  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
   <Description>Keep in sync all your users watched history between jellyfin and plex servers locally. This uses file names and provider ids to find the correct episode/movie between the two. This is not perfect but it works for most cases. You can use this for as many servers as you want by entering multiple options in the .env plex/jellyfin section separated by commas.
   <Networking>
     <Mode>bridge</Mode>
@@ -27,7 +25,7 @@
   <Data>
     <Volume>
       <HostDir/>
-      <ContainerDir>/config</ContainerDir>
+      <ContainerDir>/app/.env</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -44,7 +42,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Edit ddclient.conf in this folder to complete setup." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/app/.env" Default="" Mode="rw" Description="Edit .env file in this folder to complete setup." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
