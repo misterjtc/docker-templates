@@ -9,7 +9,7 @@
   <Description>Keep in sync all your users watched history between jellyfin and plex servers locally. This uses file names and provider ids to find the correct episode/movie between the two. This is not perfect but it works for most cases. You can use this for as many servers as you want by entering multiple options in the .env plex/jellyfin section separated by commas.;
   [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
   [b]First Run[/b] : Fill out the required fields in the .env configuration file [br]&amp;#13;&#13;
-  [b]/config[/b] : Storing the environment variable configuration file[br]&amp;#13;&#13;
+  [b]/config[/b] : Storing the environment variable configuration file[br]&amp;#13;&#13;</Description>
   <Project>https://github.com/luigi311/JellyPlex-Watched.git</Project>
   <Overview>Sync watched between jellyfin and plex locally</Overview>
   <Registry>https://hub.docker.com/r/luigi311/jellyplex-watched</Registry>
@@ -23,9 +23,6 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <Description>Keep in sync all your users watched history between jellyfin and plex servers locally. This uses file names and provider ids to find the correct episode/movie between the two. This is not perfect but it works for most cases. You can use this for as many servers as you want by entering multiple options in the .env plex/jellyfin section separated by commas.
-  <Networking>
-    <Mode>bridge</Mode>
     <Publish/>
   </Networking>
   <Data>
