@@ -32,7 +32,8 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <Value>/mnt/appdata/jellyplex-watch</Value>
+      <ContainerDir>/app/.env</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
