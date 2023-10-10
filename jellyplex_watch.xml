@@ -45,7 +45,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Appdata" Target="/app/.env" Default="" Mode="rw" Description="Edit .env file in this folder to complete setup." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/app/.env" Default="" Mode="rw" Description="Edit .env file in this folder to complete setup." Type="Path" Display="always" Required="false" Mask="false"</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
