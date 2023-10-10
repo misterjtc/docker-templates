@@ -39,5 +39,5 @@
   <WebUI></WebUI>
   <Icon>https://github.com/djdembeck/bragibooks/raw/assets/logos/logo.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/jellyplex-watch</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/jellyplex-watch/.env</Config>
 </Container>
