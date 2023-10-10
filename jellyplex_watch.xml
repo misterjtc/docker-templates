@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="1">
   <Name>jellyplex-watch</Name>
   <Repository>/luigi311/JellyPlex-Watched</Repository>
   <Registry>https://hub.docker.com/r/luigi311/jellyplex-watched</Registry>
