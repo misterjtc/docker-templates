@@ -12,7 +12,7 @@
   <Overview>Sync watched between jellyfin and plex locally</Overview>
   <Category>Tools</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/ddclient.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/misterjtc/docker-templates/main/bragibooks.xml</TemplateURL>
   <Icon></Icon>
   <ExtraParams/>
   <PostArgs/>
