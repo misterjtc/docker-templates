@@ -6,10 +6,7 @@
   <Date>2023-10-09</Date>
   <Name>jellyplex-watch</Name>
   <Support>https://github.com/misterjtc/docker-templates/issues</Support>
-  <Description>Keep in sync all your users watched history between jellyfin and plex servers locally. This uses file names and provider ids to find the correct episode/movie between the two. This is not perfect but it works for most cases. You can use this for as many servers as you want by entering multiple options in the .env plex/jellyfin section separated by commas.;
-  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
-  [b]First Run[/b] : Fill out the required fields in the .env configuration file [br]&amp;#13;&#13;
-  [b]/config[/b] : Storing the environment variable configuration file[br]&amp;#13;&#13;</Description>
+  <Description>Testing</Description>
   <Project>https://github.com/luigi311/JellyPlex-Watched.git</Project>
   <Overview>Sync watched between jellyfin and plex locally</Overview>
   <Registry>https://hub.docker.com/r/luigi311/jellyplex-watched</Registry>
@@ -19,7 +16,7 @@
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <WebUI/>
-  <Icon></Icon>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ddclient-logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -36,16 +33,14 @@
     <Variable>
       <Value>99</Value>
       <Name>PUID</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>100</Value>
       <Name>PGID</Name>
-      <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Appdata" Target="/app/.env" Default="" Mode="rw" Description="Edit .env file in this folder to complete setup." Type="Path" Display="always" Required="false" Mask="false"</Config>
+  <Config Name="Appdata" Target="/app/.env" Default="" Mode="rw" Description="Edit .env file in this folder to complete setup." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
