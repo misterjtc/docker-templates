@@ -30,14 +30,9 @@
     <Mode>bridge</Mode>
   </Networking>
   <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/app/.env</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
   </Data>
   <WebUI></WebUI>
   <Icon>https://github.com/djdembeck/bragibooks/raw/assets/logos/logo.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/jellyplex-watch/.env</Config>
+  <Config Name="Config File Path" Target="/app/.env" Default="" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/jellyplex-watch/.env</Config>
 </Container>
