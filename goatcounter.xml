@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/misterjtc/docker-templates/main/goatcounter.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Tools</Category>
+  <Date>2025-06-13</Date>
+  <Name>goatcounter</Name>
+  <Support>https://github.com/misterjtc/docker-templates/issues</Support>
+  <Description>GoatCounter is an open source web analytics platform available as a (free) hosted service or self-hosted app. It aims to offer easy to use and meaningful privacy-friendly web analytics as an alternative to Google Analytics or Matomo.;
+  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
+  [b]/config[/b] : Storing the database and location data (if applicable)[br]&amp;#13;&#13;
+  [b]8080[/b] : The web-interface [br]
+  [b]Location Data[/b] : By default, goatcounter only ships with the "counties" location database. If you want region data you need to download the "GeoLite City" database from https://maxmind.com and place in /config[br]
+  </Description>
+  <Project>https://github.com/arp242/goatcounter</Project>
+  <Overview>Easy web analytics. No tracking of personal data.</Overview>
+  <Registry>https://hub.docker.com/r/arp242/goatcounter</Registry>
+  <Repository>arp242/goatcounter:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <Name>WebUI</Name>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <Name>/config</Name>
+      <HostDir>/mnt/user/appdata/goatcounter</HostDir>
+      <ContainerDir>/home/goatcounter/goatcounter-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://github.com/jgennari/goatcounter/blob/docker/public/logo.png?raw=true</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs>serve -email-from "GoatCounter none@example.com"</PostArgs>
+</Container>
