@@ -1,46 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <TemplateURL>https://raw.githubusercontent.com/misterjtc/docker-templates/main/goatcounter.xml</TemplateURL>
-  <Beta>False</Beta>
-  <Category>Tools</Category>
-  <Date>2025-06-13</Date>
-  <Name>goatcounter</Name>
-  <Support>https://github.com/misterjtc/docker-templates/issues</Support>
-  <Description>GoatCounter is an open source web analytics platform available as a (free) hosted service or self-hosted app. It aims to offer easy to use and meaningful privacy-friendly web analytics as an alternative to Google Analytics or Matomo.;
-  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&amp;#13;&#13;
-  [b]/config[/b] : Storing the database and location data (if applicable)[br]&amp;#13;&#13;
-  [b]8080[/b] : The web-interface [br]
-  [b]Location Data[/b] : By default, goatcounter only ships with the "counties" location database. If you want region data you need to download the "GeoLite City" database from https://maxmind.com and place in /config[br]
-  </Description>
-  <Project>https://github.com/arp242/goatcounter</Project>
-  <Overview>Easy web analytics. No tracking of personal data.</Overview>
-  <Registry>https://hub.docker.com/r/arp242/goatcounter</Registry>
-  <Repository>arp242/goatcounter:latest</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
-  <Environment>
-  </Environment>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <Name>WebUI</Name>
-        <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <Name>/config</Name>
-      <HostDir>/mnt/user/appdata/goatcounter</HostDir>
-      <ContainerDir>/home/goatcounter/goatcounter-data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <WebUI>http://[IP]:[PORT:80]/</WebUI>
-  <Icon>https://github.com/jgennari/goatcounter/blob/docker/public/logo.png?raw=true</Icon>
-  <ExtraParams>--user 99:100</ExtraParams>
-  <PostArgs>serve -email-from "GoatCounter none@example.com"</PostArgs>
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>goatcounter</Name>
+    <Repository>arp242/goatcounter:latest</Repository>
+    <Registry>https://hub.docker.com/r/arp242/goatcounter</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/misterjtc/docker-templates/issues</Support>
+    <Shell>bash</Shell>
+    <GitHub>https://github.com/arp242/goatcounter</GitHub>
+    <ReadMe>https://github.com/arp242/goatcounter/blob/main/README.md</ReadMe>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Stable Goatcounter releases</TagDescription>
+    </Branch>
+    <Project>https://github.com/arp242/goatcounter</Project>
+    <Overview>Goatcounter(https://github.com/arp242/goatcounter) - Easy web analytics. No tracking of personal data.;
+    [br]Location Data : By default, goatcounter only ships with the "counties" location database. If you want region data you need to download the "GeoLite City" database from https://maxmind.com and place in Appdata[br]
+    </Overview>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/misterjtc/docker-templates/main/goatcounter.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/misterjtc/docker-templates/master/icons/goatcounter.png</Icon>
+    <Date>2026-06-15</Date>
+    <Changes>
+
+### 2025-06-15
+- Initial Release.
+
+    </Changes>
+    <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="The port for the Goatcounter Web UI" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Appdata" Target="/home/goatcounter/goatcounter-data" Default="/mnt/user/appdata/goatcounter" Mode="rw" Description="Database and Location data" Type="Path" Display="advanced" Required="true" Mask="false"/>
+    <ExtraParams>--user 99:100</ExtraParams>
+    <PostArgs>serve -email-from "GoatCounter none@example.com"</PostArgs>
 </Container>
