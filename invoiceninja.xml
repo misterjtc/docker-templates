@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>goatcounter</Name>
+    <Repository>invoiceninja/invoiceninja-debian:latest</Repository>
+    <Registry>https://hub.docker.com/r/invoiceninja/invoiceninja-debian</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/misterjtc/docker-templates/issues</Support>
+    <Shell>bash</Shell>
+    <GitHub>https://github.com/invoiceninja</GitHub>
+    <ReadMe>https://github.com/invoiceninja/dockerfiles/blob/debian/README.md</ReadMe>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Stable Invoice Ninja releases</TagDescription>
+    </Branch>
+    <Project>https://github.com/invoiceninja/invoiceninja</Project>
+    <Overview>Invoice Ninja(https://github.com/invoiceninja/invoiceninja) - Make it easy for clients to pay you.;
+    [br]Location Data : By default, goatcounter only ships with the "counties" location database. If you want region data you need to download the "GeoLite City" database from https://maxmind.com and place in Appdata[br]
+    </Overview>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/misterjtc/docker-templates/main/invoiceninja.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/misterjtc/docker-templates/master/icons/invoiceninja.png</Icon>
+    <Date>2025-12-28</Date>
+    <Changes>
+
+### 2025-12-28
+- Initial Release.
+
+    </Changes>
+    <Config Name="Appdata" Target="/var/www/app/storage" Default="/mnt/user/appdata/invoiceninja/" Mode="rw" Description="config" Type="Path" Display="advanced" Required="true" Mask="false"/>
+    <ExtraParams>--user 99:100 --env-file /mnt/cache/appdata/invoiceninja/.env</ExtraParams>
+    <PostArgs></PostArgs>
+</Container>
